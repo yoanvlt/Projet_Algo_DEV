@@ -1,0 +1,29 @@
+{
+  "generation_params": {
+    "dim": 384,
+    "n_clusters": 256,
+    "spread": 0.08,
+    "n_queries": 20,
+    "random_state": 42,
+    "centroid_seed": 10000,
+    "hnsw_m": 32,
+    "hnsw_ef_search": 80,
+    "distribution": "fixed clustered gaussians; sizes are prefixes of one max corpus"
+  },
+  "environment": {
+    "python": "3.13.3",
+    "numpy": "2.4.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "faiss": "1.14.3"
+  },
+  "note": "Latencies are wall-clock and machine-dependent; compare ratios, not absolutes.",
+  "sizes": [
+    2000,
+    10000,
+    50000,
+    200000,
+    1000000
+  ],
+  "repeats": 5
+}

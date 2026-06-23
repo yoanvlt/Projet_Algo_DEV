@@ -1,0 +1,37 @@
+[project]
+name = "vector-search-memoire"
+version = "0.1.0"
+description = "Mini-memoire M1: bases vectorielles, recherche semantique, BM25 et ANN/HNSW."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+app = [
+    "streamlit>=1.36",
+    "plotly>=5.22",
+    "matplotlib>=3.8",
+]
+full = [
+    "streamlit>=1.36",
+    "plotly>=5.22",
+    "matplotlib>=3.8",
+    "sentence-transformers>=3.0",
+    "faiss-cpu>=1.8",
+    "umap-learn>=0.5",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

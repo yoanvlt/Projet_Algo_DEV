@@ -1,0 +1,365 @@
+{
+  "k": 10,
+  "map_depth": 50,
+  "candidate_count": 50,
+  "rerankers": {
+    "hybrid_bi": {
+      "name": "bi-encoder",
+      "is_fallback": false,
+      "kind": "BiEncoderReranker"
+    },
+    "hybrid_cross": {
+      "name": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "is_fallback": false,
+      "kind": "CrossEncoderReranker",
+      "model_name": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "sentence_transformers_version": "5.6.0",
+      "revision": "c5ee24cb16019beea0893ab7796b1df96625c6b8"
+    }
+  },
+  "regimes": {
+    "bm25": {
+      "precision_at_k": 0.32999999999999996,
+      "recall_at_k": 0.2742384412972648,
+      "ndcg_at_k": 0.5399552406762866,
+      "average_precision": 0.26211053510518945
+    },
+    "dense": {
+      "precision_at_k": 0.36500000000000005,
+      "recall_at_k": 0.2966073428205781,
+      "ndcg_at_k": 0.617144584090583,
+      "average_precision": 0.34590959984672415
+    },
+    "hybrid_bi": {
+      "precision_at_k": 0.35,
+      "recall_at_k": 0.2910492203874556,
+      "ndcg_at_k": 0.6047877701249764,
+      "average_precision": 0.27212741654165945
+    },
+    "hybrid_cross": {
+      "precision_at_k": 0.34500000000000003,
+      "recall_at_k": 0.28864916945799296,
+      "ndcg_at_k": 0.6139708220833084,
+      "average_precision": 0.297448904187742
+    }
+  },
+  "ndcg_by_style": {
+    "lexical": {
+      "bm25": 0.668870258204084,
+      "dense": 0.7263515382557542,
+      "hybrid_bi": 0.7048887131930492,
+      "hybrid_cross": 0.6987384277752471
+    },
+    "mixed": {
+      "bm25": 0.5621311491797576,
+      "dense": 0.6375875831802915,
+      "hybrid_bi": 0.5960230071157174,
+      "hybrid_cross": 0.6273466123484
+    },
+    "semantic": {
+      "bm25": 0.3767838574277534,
+      "dense": 0.4777344942663097,
+      "hybrid_bi": 0.49664723733950694,
+      "hybrid_cross": 0.5075394225317421
+    }
+  },
+  "n_rerank_changes": 40,
+  "rerank_changes": [
+    {
+      "query_id": "Q01",
+      "style": "semantic",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": -0.014239379946977666,
+      "ap_delta_vs_bm25": 0.009940095741602886
+    },
+    {
+      "query_id": "Q01",
+      "style": "semantic",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.005200397967915285,
+      "ap_delta_vs_bm25": 0.016426933939946008
+    },
+    {
+      "query_id": "Q02",
+      "style": "mixed",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": -0.3923422407328455,
+      "ap_delta_vs_bm25": -0.40255688755688745
+    },
+    {
+      "query_id": "Q02",
+      "style": "mixed",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": -0.2616561792689698,
+      "ap_delta_vs_bm25": -0.32061020394779977
+    },
+    {
+      "query_id": "Q03",
+      "style": "lexical",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.2336251673060749,
+      "ap_delta_vs_bm25": 0.16204595882015238
+    },
+    {
+      "query_id": "Q03",
+      "style": "lexical",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.21501247846598998,
+      "ap_delta_vs_bm25": 0.11005291005291007
+    },
+    {
+      "query_id": "Q04",
+      "style": "lexical",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": -0.12898367833373447,
+      "ap_delta_vs_bm25": -0.3182658379594325
+    },
+    {
+      "query_id": "Q04",
+      "style": "lexical",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": -0.0362675433479992,
+      "ap_delta_vs_bm25": -0.11922295096208135
+    },
+    {
+      "query_id": "Q05",
+      "style": "semantic",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": -0.02328465292402071,
+      "ap_delta_vs_bm25": -0.0024094157322997745
+    },
+    {
+      "query_id": "Q05",
+      "style": "semantic",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.11826687276650394,
+      "ap_delta_vs_bm25": 0.14166771925392616
+    },
+    {
+      "query_id": "Q06",
+      "style": "semantic",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.31055451359402897,
+      "ap_delta_vs_bm25": 0.13886999244142098
+    },
+    {
+      "query_id": "Q06",
+      "style": "semantic",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.17803864425500493,
+      "ap_delta_vs_bm25": 0.0535049373284667
+    },
+    {
+      "query_id": "Q07",
+      "style": "lexical",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.12605838664012747,
+      "ap_delta_vs_bm25": 0.1111276455026455
+    },
+    {
+      "query_id": "Q07",
+      "style": "lexical",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.2172151519372867,
+      "ap_delta_vs_bm25": 0.2835813492063492
+    },
+    {
+      "query_id": "Q08",
+      "style": "lexical",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": -0.015963479997643415,
+      "ap_delta_vs_bm25": -0.05788506179810528
+    },
+    {
+      "query_id": "Q08",
+      "style": "lexical",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.07665080077298447,
+      "ap_delta_vs_bm25": 0.08721450962830272
+    },
+    {
+      "query_id": "Q09",
+      "style": "lexical",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.08650533727882181,
+      "ap_delta_vs_bm25": 0.15866310695018981
+    },
+    {
+      "query_id": "Q09",
+      "style": "lexical",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.027376509996633103,
+      "ap_delta_vs_bm25": 0.03962105318631626
+    },
+    {
+      "query_id": "Q10",
+      "style": "semantic",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.05562484957495828,
+      "ap_delta_vs_bm25": -0.04849121466768527
+    },
+    {
+      "query_id": "Q10",
+      "style": "semantic",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.032255088991177905,
+      "ap_delta_vs_bm25": -0.08637000254647317
+    },
+    {
+      "query_id": "Q11",
+      "style": "mixed",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.20089257189380239,
+      "ap_delta_vs_bm25": 0.12797202797202797
+    },
+    {
+      "query_id": "Q11",
+      "style": "mixed",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.20345458533434468,
+      "ap_delta_vs_bm25": 0.12797202797202797
+    },
+    {
+      "query_id": "Q12",
+      "style": "mixed",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.16181075482812274,
+      "ap_delta_vs_bm25": 0.05323789729461234
+    },
+    {
+      "query_id": "Q12",
+      "style": "mixed",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.14174959342120524,
+      "ap_delta_vs_bm25": 0.013389537447772298
+    },
+    {
+      "query_id": "Q13",
+      "style": "semantic",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.2318056364889361,
+      "ap_delta_vs_bm25": 0.30238095238095236
+    },
+    {
+      "query_id": "Q13",
+      "style": "semantic",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.21037790022284958,
+      "ap_delta_vs_bm25": 0.30238095238095236
+    },
+    {
+      "query_id": "Q14",
+      "style": "lexical",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.18794748348602053,
+      "ap_delta_vs_bm25": 0.18490065858592064
+    },
+    {
+      "query_id": "Q14",
+      "style": "lexical",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": -0.02096112059981725,
+      "ap_delta_vs_bm25": 0.011647655461594075
+    },
+    {
+      "query_id": "Q15",
+      "style": "lexical",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": -0.20842529070351123,
+      "ap_delta_vs_bm25": -0.18987679930949197
+    },
+    {
+      "query_id": "Q15",
+      "style": "lexical",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": -0.18035252994419326,
+      "ap_delta_vs_bm25": -0.14666207295878947
+    },
+    {
+      "query_id": "Q16",
+      "style": "mixed",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.10085584273933834,
+      "ap_delta_vs_bm25": 0.0054143504138202125
+    },
+    {
+      "query_id": "Q16",
+      "style": "mixed",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.14336776117107064,
+      "ap_delta_vs_bm25": 0.0930829751763394
+    },
+    {
+      "query_id": "Q17",
+      "style": "lexical",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.007383714235567829,
+      "ap_delta_vs_bm25": -0.04289855072463755
+    },
+    {
+      "query_id": "Q17",
+      "style": "lexical",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": -0.05972839071157898,
+      "ap_delta_vs_bm25": 0.002592592592592702
+    },
+    {
+      "query_id": "Q18",
+      "style": "semantic",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.20446025938745105,
+      "ap_delta_vs_bm25": 0.048611111111111105
+    },
+    {
+      "query_id": "Q18",
+      "style": "semantic",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.2542479009122509,
+      "ap_delta_vs_bm25": 0.09027777777777776
+    },
+    {
+      "query_id": "Q19",
+      "style": "mixed",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.0982423609513805,
+      "ap_delta_vs_bm25": -0.03920099508334801
+    },
+    {
+      "query_id": "Q19",
+      "style": "mixed",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.09916155518556047,
+      "ap_delta_vs_bm25": -0.06006791246490788
+    },
+    {
+      "query_id": "Q20",
+      "style": "semantic",
+      "regime": "hybrid_bi",
+      "ndcg_delta_vs_bm25": 0.07412243320789885,
+      "ap_delta_vs_bm25": -0.0012414056531703799
+    },
+    {
+      "query_id": "Q20",
+      "style": "semantic",
+      "regime": "hybrid_cross",
+      "ndcg_delta_vs_bm25": 0.11690215061221781,
+      "ap_delta_vs_bm25": 0.06628759312582838
+    }
+  ],
+  "conclusion": {
+    "metric": "ndcg_at_k",
+    "best_hybrid_regime": "hybrid_cross",
+    "hybrid_ndcg": 0.6139708220833084,
+    "bm25_ndcg": 0.5399552406762866,
+    "dense_ndcg": 0.617144584090583,
+    "hybrid_beats_bm25": true,
+    "hybrid_beats_dense": false,
+    "hybrid_beats_both_overall": false,
+    "hybrid_wins_on_styles": [
+      "semantic"
+    ],
+    "gain_vs_bm25": 0.0740155814070218,
+    "gain_vs_dense": -0.0031737620072745942,
+    "verdict": "Hybrid (hybrid_cross) nDCG@10=0.614 beats BM25 (0.540) but not dense (0.617) overall; it does beat both on these query styles: ['semantic']."
+  }
+}

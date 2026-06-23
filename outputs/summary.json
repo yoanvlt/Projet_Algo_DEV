@@ -1,0 +1,85 @@
+{
+  "n_docs": 2000,
+  "n_queries": 20,
+  "random_state": 42,
+  "k": 10,
+  "candidate_count": 50,
+  "map_depth": 50,
+  "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+  "ann_index": "faiss-hnsw",
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "cross_encoder_is_fallback": false,
+  "cross_encoder_metadata": {
+    "name": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "is_fallback": false,
+    "kind": "CrossEncoderReranker",
+    "model_name": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "sentence_transformers_version": "5.6.0",
+    "revision": "c5ee24cb16019beea0893ab7796b1df96625c6b8"
+  },
+  "embedding_seconds": 8.195916799999395,
+  "ann_build_seconds": 0.04932369999914954,
+  "relevance": {
+    "n_queries": 20,
+    "relevant_per_query_min": 3.0,
+    "relevant_per_query_median": 11.5,
+    "relevant_per_query_max": 20.0,
+    "relevant_per_query_mean": 11.75
+  },
+  "bm25_mean_precision_at_k": 0.32999999999999996,
+  "bm25_mean_recall_at_k": 0.2742384412972648,
+  "bm25_mean_ndcg_at_k": 0.5399552406762866,
+  "bm25_map": 0.26211053510518945,
+  "vector_mean_precision_at_k": 0.36500000000000005,
+  "vector_mean_recall_at_k": 0.2966073428205781,
+  "vector_mean_ndcg_at_k": 0.617144584090583,
+  "vector_map": 0.34590959984672415,
+  "regime_comparison": {
+    "detail_file": "regime_summary.json",
+    "regimes": {
+      "bm25": {
+        "precision_at_k": 0.32999999999999996,
+        "recall_at_k": 0.2742384412972648,
+        "ndcg_at_k": 0.5399552406762866,
+        "average_precision": 0.26211053510518945
+      },
+      "dense": {
+        "precision_at_k": 0.36500000000000005,
+        "recall_at_k": 0.2966073428205781,
+        "ndcg_at_k": 0.617144584090583,
+        "average_precision": 0.34590959984672415
+      },
+      "hybrid_bi": {
+        "precision_at_k": 0.35,
+        "recall_at_k": 0.2910492203874556,
+        "ndcg_at_k": 0.6047877701249764,
+        "average_precision": 0.27212741654165945
+      },
+      "hybrid_cross": {
+        "precision_at_k": 0.34500000000000003,
+        "recall_at_k": 0.28864916945799296,
+        "ndcg_at_k": 0.6139708220833084,
+        "average_precision": 0.297448904187742
+      }
+    },
+    "conclusion": {
+      "metric": "ndcg_at_k",
+      "best_hybrid_regime": "hybrid_cross",
+      "hybrid_ndcg": 0.6139708220833084,
+      "bm25_ndcg": 0.5399552406762866,
+      "dense_ndcg": 0.617144584090583,
+      "hybrid_beats_bm25": true,
+      "hybrid_beats_dense": false,
+      "hybrid_beats_both_overall": false,
+      "hybrid_wins_on_styles": [
+        "semantic"
+      ],
+      "gain_vs_bm25": 0.0740155814070218,
+      "gain_vs_dense": -0.0031737620072745942,
+      "verdict": "Hybrid (hybrid_cross) nDCG@10=0.614 beats BM25 (0.540) but not dense (0.617) overall; it does beat both on these query styles: ['semantic']."
+    }
+  },
+  "ann_recall_at_k_vs_exact": 1.0,
+  "exact_mean_seconds": 0.00038097999995443386,
+  "ann_mean_seconds": 0.0002820100004100823
+}

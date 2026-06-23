@@ -1,0 +1,81 @@
+query_id,query,style,topic,regime,relevant_total,precision_at_k,recall_at_k,ndcg_at_k,average_precision
+Q01,retrieve case documents that express the same idea in other words,semantic,legal_tech,bm25,3,0.0,0.0,0.04271813984093299,0.04409801678108314
+Q01,retrieve case documents that express the same idea in other words,semantic,legal_tech,dense,3,0.0,0.0,0.028478759893955326,0.007575757575757576
+Q01,retrieve case documents that express the same idea in other words,semantic,legal_tech,hybrid_bi,3,0.0,0.0,0.028478759893955326,0.054038112522686026
+Q01,retrieve case documents that express the same idea in other words,semantic,legal_tech,hybrid_cross,3,0.0,0.0,0.04791853780884828,0.06052495072102915
+Q02,precedent search across court decisions and case law,mixed,legal_tech,bm25,10,0.7,0.7,0.8363737201414463,0.5833333333333333
+Q02,precedent search across court decisions and case law,mixed,legal_tech,dense,10,0.1,0.1,0.44403147940860077,0.19009462759462759
+Q02,precedent search across court decisions and case law,mixed,legal_tech,hybrid_bi,10,0.1,0.1,0.44403147940860077,0.18077644577644578
+Q02,precedent search across court decisions and case law,mixed,legal_tech,hybrid_cross,10,0.2,0.2,0.5747175408724765,0.2627231293855335
+Q03,bm25 keyword matching and term frequency scoring over the catalog,lexical,recommender_systems,bm25,9,0.1,0.1111111111111111,0.4067073314262591,0.1561358593616658
+Q03,bm25 keyword matching and term frequency scoring over the catalog,lexical,recommender_systems,dense,9,0.5,0.5555555555555556,0.7725107435897188,0.5360210106586919
+Q03,bm25 keyword matching and term frequency scoring over the catalog,lexical,recommender_systems,hybrid_bi,9,0.3,0.3333333333333333,0.640332498732334,0.3181818181818182
+Q03,bm25 keyword matching and term frequency scoring over the catalog,lexical,recommender_systems,hybrid_cross,9,0.3,0.3333333333333333,0.6217198098922491,0.26618876941457587
+Q04,hospital emergency assessment and patient triage routing,lexical,healthcare_ai,bm25,15,0.8,0.5333333333333333,0.8760121493430878,0.7578957462290796
+Q04,hospital emergency assessment and patient triage routing,lexical,healthcare_ai,dense,15,0.4,0.26666666666666666,0.6952241838546666,0.33783150936139544
+Q04,hospital emergency assessment and patient triage routing,lexical,healthcare_ai,hybrid_bi,15,0.5,0.3333333333333333,0.7470284710093533,0.43962990826964715
+Q04,hospital emergency assessment and patient triage routing,lexical,healthcare_ai,hybrid_cross,15,0.7,0.4666666666666667,0.8397446059950886,0.6386727952669983
+Q05,reading and interpreting radiology scans for diagnosis,semantic,healthcare_ai,bm25,11,0.2,0.18181818181818182,0.5586167518760848,0.18642085883465195
+Q05,reading and interpreting radiology scans for diagnosis,semantic,healthcare_ai,dense,11,0.2,0.18181818181818182,0.5991371630152889,0.1719654751852894
+Q05,reading and interpreting radiology scans for diagnosis,semantic,healthcare_ai,hybrid_bi,11,0.2,0.18181818181818182,0.5353320989520641,0.18401144310235218
+Q05,reading and interpreting radiology scans for diagnosis,semantic,healthcare_ai,hybrid_cross,11,0.4,0.36363636363636365,0.6768836246425888,0.3280885780885781
+Q06,spotting rare unusual events in network traffic,semantic,cybersecurity,bm25,7,0.3,0.42857142857142855,0.33220853858443566,0.17949735449735452
+Q06,spotting rare unusual events in network traffic,semantic,cybersecurity,dense,7,0.1,0.14285714285714285,0.5202961595477287,0.22380952380952382
+Q06,spotting rare unusual events in network traffic,semantic,cybersecurity,hybrid_bi,7,0.4,0.5714285714285714,0.6427630521784646,0.3183673469387755
+Q06,spotting rare unusual events in network traffic,semantic,cybersecurity,hybrid_cross,7,0.2,0.2857142857142857,0.5102471828394406,0.23300229182582122
+Q07,intrusion monitoring and malware campaign analysis on endpoints,lexical,cybersecurity,bm25,12,0.1,0.08333333333333333,0.44599638655528984,0.049751984126984124
+Q07,intrusion monitoring and malware campaign analysis on endpoints,lexical,cybersecurity,dense,12,0.3,0.25,0.5720547731954173,0.3118433445603723
+Q07,intrusion monitoring and malware campaign analysis on endpoints,lexical,cybersecurity,hybrid_bi,12,0.3,0.25,0.5720547731954173,0.16087962962962962
+Q07,intrusion monitoring and malware campaign analysis on endpoints,lexical,cybersecurity,hybrid_cross,12,0.4,0.3333333333333333,0.6632115384925765,0.3333333333333333
+Q08,suspicious transaction screening for payment abuse,lexical,finance_risk,bm25,11,0.1,0.09090909090909091,0.5074182703685235,0.11805194805194806
+Q08,suspicious transaction screening for payment abuse,lexical,finance_risk,dense,11,0.2,0.18181818181818182,0.529314346630531,0.15506816415907326
+Q08,suspicious transaction screening for payment abuse,lexical,finance_risk,hybrid_bi,11,0.1,0.09090909090909091,0.4914547903708801,0.06016688625384278
+Q08,suspicious transaction screening for payment abuse,lexical,finance_risk,hybrid_cross,11,0.2,0.18181818181818182,0.584069071141508,0.20526645768025079
+Q09,credit default probability estimation and risk scoring,lexical,finance_risk,bm25,14,0.5,0.35714285714285715,0.7784283510183809,0.5029173258016425
+Q09,credit default probability estimation and risk scoring,lexical,finance_risk,dense,14,0.7,0.5,0.8820480387228063,0.6323232729655298
+Q09,credit default probability estimation and risk scoring,lexical,finance_risk,hybrid_bi,14,0.7,0.5,0.8649336882972027,0.6615804327518323
+Q09,credit default probability estimation and risk scoring,lexical,finance_risk,hybrid_cross,14,0.6,0.42857142857142855,0.805804861015014,0.5425383789879588
+Q10,predicting how much power renewable plants will produce,semantic,climate_energy,bm25,11,0.2,0.18181818181818182,0.5751640493784796,0.2689457601222307
+Q10,predicting how much power renewable plants will produce,semantic,climate_energy,dense,11,0.4,0.36363636363636365,0.6307888989534379,0.3718144305610755
+Q10,predicting how much power renewable plants will produce,semantic,climate_energy,hybrid_bi,11,0.4,0.36363636363636365,0.6307888989534379,0.22045454545454543
+Q10,predicting how much power renewable plants will produce,semantic,climate_energy,hybrid_cross,11,0.4,0.36363636363636365,0.6074191383696576,0.18257575757575753
+Q11,seasonal temporal signal forecasting,mixed,climate_energy,bm25,13,0.2,0.15384615384615385,0.4333885058516048,0.10279720279720281
+Q11,seasonal temporal signal forecasting,mixed,climate_energy,dense,13,0.6,0.46153846153846156,0.8231343447609891,0.47563068161074806
+Q11,seasonal temporal signal forecasting,mixed,climate_energy,hybrid_bi,13,0.3,0.23076923076923078,0.6342810777454072,0.23076923076923078
+Q11,seasonal temporal signal forecasting,mixed,climate_energy,hybrid_cross,13,0.3,0.23076923076923078,0.6368430911859495,0.23076923076923078
+Q12,personalized recommendation from a user profile graph,mixed,recommender_systems,bm25,10,0.3,0.3,0.41610907932976543,0.23178266547595042
+Q12,personalized recommendation from a user profile graph,mixed,recommender_systems,dense,10,0.2,0.2,0.5779198341578882,0.3179297279677062
+Q12,personalized recommendation from a user profile graph,mixed,recommender_systems,hybrid_bi,10,0.2,0.2,0.5779198341578882,0.28502056277056276
+Q12,personalized recommendation from a user profile graph,mixed,recommender_systems,hybrid_cross,10,0.3,0.3,0.5578586727509707,0.24517220292372272
+Q13,grouping the audience into customer cohorts from sessions,semantic,recommender_systems,bm25,8,0.2,0.25,0.3977915565583828,0.07261904761904762
+Q13,grouping the audience into customer cohorts from sessions,semantic,recommender_systems,dense,8,0.3,0.375,0.6099626621757602,0.413171768707483
+Q13,grouping the audience into customer cohorts from sessions,semantic,recommender_systems,hybrid_bi,8,0.3,0.375,0.6295971930473189,0.375
+Q13,grouping the audience into customer cohorts from sessions,semantic,recommender_systems,hybrid_cross,8,0.3,0.375,0.6081694567812324,0.375
+Q14,autonomous path planning for warehouse robots,lexical,robotics,bm25,16,0.4,0.25,0.7308987695553355,0.29141382554106343
+Q14,autonomous path planning for warehouse robots,lexical,robotics,dense,16,0.9,0.5625,0.9552009891550427,0.9158827467467173
+Q14,autonomous path planning for warehouse robots,lexical,robotics,hybrid_bi,16,0.8,0.5,0.918846253041356,0.4763144841269841
+Q14,autonomous path planning for warehouse robots,lexical,robotics,hybrid_cross,16,0.4,0.25,0.7099376489555183,0.3030614810026575
+Q15,camera lidar fusion for perception,lexical,robotics,bm25,14,0.6,0.42857142857142855,0.7794896929594821,0.4503148791199356
+Q15,camera lidar fusion for perception,lexical,robotics,dense,14,0.3,0.21428571428571427,0.5710644022559709,0.23706930297461856
+Q15,camera lidar fusion for perception,lexical,robotics,hybrid_bi,14,0.3,0.21428571428571427,0.5710644022559709,0.26043807981044365
+Q15,camera lidar fusion for perception,lexical,robotics,hybrid_cross,14,0.2,0.14285714285714285,0.5991371630152889,0.30365280616114615
+Q16,genomic sequence matching across the genome,mixed,bioinformatics,bm25,20,0.6,0.3,0.6742522604288566,0.28004054137802814
+Q16,genomic sequence matching across the genome,mixed,bioinformatics,dense,20,0.6,0.3,0.7751081031681949,0.2768146298146298
+Q16,genomic sequence matching across the genome,mixed,bioinformatics,hybrid_bi,20,0.6,0.3,0.7751081031681949,0.28545489179184835
+Q16,genomic sequence matching across the genome,mixed,bioinformatics,hybrid_cross,20,0.6,0.3,0.8176200215999272,0.37312351655436754
+Q17,case file tagging for contract documents,lexical,legal_tech,bm25,10,0.6,0.6,0.8260111144063121,0.6233333333333333
+Q17,case file tagging for contract documents,lexical,legal_tech,dense,10,0.6,0.6,0.83339482864188,0.6124347826086958
+Q17,case file tagging for contract documents,lexical,legal_tech,hybrid_bi,10,0.6,0.6,0.83339482864188,0.5804347826086957
+Q17,case file tagging for contract documents,lexical,legal_tech,hybrid_cross,10,0.6,0.6,0.7662827236947332,0.625925925925926
+Q18,ordering the most relevant security alerts first,semantic,cybersecurity,bm25,12,0.2,0.16666666666666666,0.30346113711172307,0.048611111111111105
+Q18,ordering the most relevant security alerts first,semantic,cybersecurity,dense,12,0.4,0.3333333333333333,0.5478616839697238,0.5308188400293663
+Q18,ordering the most relevant security alerts first,semantic,cybersecurity,hybrid_bi,12,0.2,0.16666666666666666,0.5079213964991741,0.09722222222222221
+Q18,ordering the most relevant security alerts first,semantic,cybersecurity,hybrid_cross,12,0.2,0.16666666666666666,0.557709038023974,0.13888888888888887
+Q19,outlier detection in patient records,mixed,healthcare_ai,bm25,17,0.2,0.11764705882352941,0.4505321801471155,0.14707596325243383
+Q19,outlier detection in patient records,mixed,healthcare_ai,dense,17,0.3,0.17647058823529413,0.5677441544057849,0.07560553633217994
+Q19,outlier detection in patient records,mixed,healthcare_ai,hybrid_bi,17,0.3,0.17647058823529413,0.548774541098496,0.10787496816908582
+Q19,outlier detection in patient records,mixed,healthcare_ai,hybrid_cross,17,0.2,0.11764705882352941,0.549693735332676,0.08700805078752595
+Q20,meaning based lookup over genomic sequence literature,semantic,bioinformatics,bm25,12,0.3,0.25,0.4275268286442347,0.14717394533571007
+Q20,meaning based lookup over genomic sequence literature,semantic,bioinformatics,dense,12,0.2,0.16666666666666666,0.4076161323082731,0.12448686371100164
+Q20,meaning based lookup over genomic sequence literature,semantic,bioinformatics,hybrid_bi,12,0.4,0.3333333333333333,0.5016492618521335,0.1459325396825397
+Q20,meaning based lookup over genomic sequence literature,semantic,bioinformatics,hybrid_cross,12,0.4,0.3333333333333333,0.5444289792564525,0.21346153846153845
